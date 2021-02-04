@@ -14,7 +14,7 @@ def nl(itr):
 
 # could have used a namedtuple 
 class Pizza:
-    def __init__(self, label, ingredients):
+    def __init__(self, label: int, ingredients):
         self.ingredients = ingredients
         self.label = label
 
@@ -25,7 +25,7 @@ def parse(inp):
     # pizza: {label: int, ingredients: [int]}
     p = []
     curring = 0
-    ingredients = dict()
+    ingredients = dict() # string to int "mushroom"-> 1, "tomato"->2
     for num in range(M):
         line = lines[num+1]
         curringlist = []

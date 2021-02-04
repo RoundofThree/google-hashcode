@@ -15,8 +15,8 @@ def solve(inp, args):
     t4 = ns.t4
     currpizza = 0
 
-    out2 = [] # [int]
-    out3 = []
+    out2 = [] # List[List[Int]] [[2, 3, 4], [2, 0, 1]]
+    out3 = [] # [[3, 1, 0, 4], [3, 2, 3, 5]]
     out4 = []
     # assign to teams 2, then to teams 3, and then to teams 4
     while currpizza < M-1 and t2 > 0:

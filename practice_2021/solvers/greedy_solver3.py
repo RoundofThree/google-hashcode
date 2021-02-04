@@ -85,7 +85,7 @@ def solve(inp, args):
     print(f"There are {len(out2)} teams2, {len(out3)} teams 3, {len(out4)} teams4.")
     out = out2 + out3 + out4 
     out = list(map(serialize, out))
-    return '\n'.join([str(len(out))] + out)
+    return '\n'.join([str(len(out))] + out) 
 
 # Convert List[List[Int]] to List[String]
 def serialize(integers) -> str:
