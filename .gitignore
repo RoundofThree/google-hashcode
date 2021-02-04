@@ -1,5 +1,10 @@
 template/__pycache__/*
 template/.vscode/*
 template/runs/*
+template/ans/*
+template/solvers/__pycache__/*
+
+max.json
+
 
 .vscode/*

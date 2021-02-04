@@ -14,12 +14,10 @@ def solve(inp, args):
     t3 = ns.t3
     t4 = ns.t4
     currpizza = 0
-    # output 
+
     out2 = [] # [int]
     out3 = []
     out4 = []
-    # sort the pizzas 
-    pizzas.sort(key=lambda x: len(x.ingredients))
     # assign to teams 4, then to teams 3, and then to teams 2
     while currpizza < M-3 and t4 > 0:
         out4.append([4, pizzas[currpizza].label, pizzas[currpizza+1].label, pizzas[currpizza+2].label, pizzas[currpizza+3].label])
@@ -33,7 +31,7 @@ def solve(inp, args):
         out2.append([2, pizzas[currpizza].label, pizzas[currpizza+1].label])
         currpizza += 2
         t2 -= 1
-
+    
     out = out2 + out3 + out4 
     out = list(map(serialize, out))
     return '\n'.join([str(len(out))] + out)

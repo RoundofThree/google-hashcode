@@ -1,3 +1,3 @@
 #!/bin/bash
 mkdir -p submission
-zip submission/src.zip *.py
+zip submission/src.zip *.py solvers/*.py 
