@@ -20,15 +20,14 @@ class Pizza:
 
 # parser logic 
 def parse(inp):
-    # TODO: fill ns
     lines = inp.split('\n')
     M, T2, T3, T4 = map(int, lines[0].split())
-    # pizza: {label: int, flavours: [int]}
-    # dict: string -> int
+    # pizza: {label: int, ingredients: [int]}
     p = []
     curring = 0
     ingredients = dict()
-    for num, line in enumerate(lines[1:]):
+    for num in range(M):
+        line = lines[num+1]
         curringlist = []
         # build the ingredients list 
         for ing in line.split()[1:]:

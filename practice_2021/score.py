@@ -6,15 +6,22 @@ from dataparser import *
 def score(inp, out):
     # input 
     ns = parse(inp)
+    M = ns.m
     pizzas = ns.pizzas 
     # output 
     deliveries = [line for line in out.split('\n')]
     score = 0
 
     pizzadict = get_pizza_dict(pizzas)
+    visited = [False for i in range(M)]
 
     for delivery in deliveries[1:]:
         pizza_combo = list(map(int, delivery.split()[1:]))
+        for pizza in pizza_combo:
+            if visited[pizza]:
+                print(f"Error, {pizza} already delivered.")
+                return 0
+            visited[pizza] = True
         score += pow(get_unique_len(pizza_combo, pizzadict), 2)
     
     return score
